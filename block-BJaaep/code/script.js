@@ -17,6 +17,9 @@ for(let i = 0; i < li1.length; i++){
  function handleClick(ele) {
     let span = ele.querySelector('span');
     span.style.display ="inline"
+    setTimeout(() => {
+        span.style.display="none"; 
+    }, 5000);
 }
 /**************Second List *************************/
 
@@ -32,6 +35,9 @@ ul[1].addEventListener('click',handleEvent);
 function handleEvent(event) {
     let span = event.target.querySelector('span');
     span.style.display="inline";
+    setTimeout(() => {
+        span.style.display="none"; 
+    }, 5000);
 }
 
  
