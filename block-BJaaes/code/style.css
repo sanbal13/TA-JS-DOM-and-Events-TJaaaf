@@ -1,0 +1,132 @@
+/* CSS Reset */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/***************************** Custom Styles *************************/
+html {
+  font-size: 16px;
+}
+body {
+  background-color: khaki;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.container{
+ max-width: 400px;
+ width: 100%;
+ margin: 5rem auto;
+ box-shadow: 0.25rem 0.25rem 0.5rem  rgb(59, 58, 58);
+ border-radius: 0.5rem;
+}
+/********************************** Header ***************************/
+header {
+  background-color: grey;
+  text-align: center;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  padding: 1rem;
+  border-bottom: 1rem solid black;
+  color: rgb(218, 212, 212);
+  text-transform: uppercase;
+}
+/********************************** Form *****************************/
+
+form {
+  background: rgb(192, 182, 71);
+  padding: 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.form-control {
+  margin-bottom: 0.7rem;
+}
+label, input {
+  width: 100%;
+  padding:0.5rem;
+}
+input{
+  margin-top: 0.1rem;
+  outline: none;
+  border: none;
+  background-color: rgb(226, 213, 110);
+  border-radius: 0.25rem;
+}
+small {
+  font-size: 0.9rem;
+  color: red;
+}
+button {
+  width: 100%;
+  border: none;
+  background-color: rgb(121, 110, 17);
+  color: white;
+  padding: 0.8rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.25rem rgb(87, 79, 13);
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+  letter-spacing: 0.05rem;
+  outline: none;
+}
+
+button:hover {
+  background: rgb(75, 66, 1);
+  color: khaki;
+  
+}
+button:active {
+  background-color: lightcoral;
+}
+small {
+  color: red;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.error {
+  border: 2px solid red;
+}
+
+.success {
+  border: 2px solid green; 
+}
