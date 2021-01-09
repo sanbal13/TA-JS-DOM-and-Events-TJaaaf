@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TODO Application</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Family -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <h1 class="main-heading">
+      Todos
+    </h1>
+  </header>
+  <main class="container">
+    <div class="head">
+      <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+      <input type="text" class="text" name="text" placeholder="What needs to be done?">
+    </div>
+    <ul>
+      <span></span>
+    </ul>
+    <div class="action">
+      <div class="flex">
+        <div class="number"></div>
+        <div class="status">
+          <span class="all">All</span>
+          <span class="active">Active</span>
+          <span class="completed">Completed</span>
+        </div>
+        <div class="clear-completed">Clear completed</div>
+      </div>
+    </div>
+
+    <div class="middle"></div>
+    <div class="last"></div>
+
+  </main>
+  <script src="./script.js"></script>
+</body>
+
+</html>
