@@ -1,7 +1,176 @@
-* {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*************************** Custom Styles begins here ********************/
+html {
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #F4F5F9;
+}
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 0 2rem;
+}
+header {
+  background: linear-gradient(to right, #62C4F5, #A669E9);
+  text-align: center;
+  padding: 2rem;
+}
+.main-heading {
+  color: #fff;  
+  font-size: 2rem;
+  
+  padding: 2rem;
+}
+.text {
+   padding: 0.5rem;
+   border-radius: 0.5rem;
+   outline: none;
+   border: none;
+   font-size: 1.2rem;
+}
+
+.text:focus {
+  
+  outline: 1px dashed rgb(8, 8, 180);
+  outline-offset: -0.3rem;  
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.space-between {
+ justify-content: space-between; 
+}
+
+main{
+  background-color: #F4F5F9;
+}
+.ul-options li {
+  border-radius: 0.2rem;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 1px grey;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.ul-cards, .ul-options {
+  justify-content: space-around;
+}
+
+.ul-cards li {
+  background-color: #fff;  
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 1px grey;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.flex-31 {
+  flex: 0 1 31%;
+}
+
+.button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #E7EDFD;
+  color: #617ACF;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #b3bcd6;
+  text-shadow: 1px 1px 1px grey;
+  color: #142869;
+}
+
+img {
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 4px solid #437B71;
+}
+.center {
+  align-items: center;
+}
+.heading-name {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.description {
+  margin-top: 1rem;
+}
+
+.default {
+  background-color: #000;
+  color: #fff;  
+}
+.selected {
+  background-color: #fff;
+  color: black;
+  border: 2px solid blue;
 }
