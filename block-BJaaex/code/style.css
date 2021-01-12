@@ -101,7 +101,7 @@ body {
 } */
 
 .active {
-    background-color: salmon;
+    background-color: grey;
 }
 
 .deactivate {
@@ -131,9 +131,14 @@ body {
 .modal p {
     font-size: 2rem;
     margin-top: 1rem;
+    width: 100%;
+    text-align: center;
 }
 
 img {
-    /* display: none; */
+    display: none;
     width: 50%;
+}
+.show-img{
+    display: inline-block;
 }
