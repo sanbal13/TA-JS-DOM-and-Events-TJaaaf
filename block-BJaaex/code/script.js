@@ -8,7 +8,8 @@ function handleClick(event) {
 
     if (event.target.classList.contains("card") && !event.target.classList.contains("deactivate") && event.target != activeCards[0]) {
         startTime = startTime || new Date();
-        let card = event.target;      
+        let card = event.target;  
+        card.firstElementChild.classList.add("show-img");    
         count++;
         if (count === 1) {
             activeCards = [];
@@ -19,30 +20,30 @@ function handleClick(event) {
 
         if (count === 2) {
             count = 0;
-            
-             if (activeCards[0].firstElementChild.alt == activeCards[1].firstElementChild.alt)  {
-                activeCards.forEach((card) => {
-                    card.innerText = "";
-                    card.classList.remove("active");
-                    card.classList.add("deactivate");
-                }
-                )
-            }
-            checkGameOver(moves, startTime);
-          
+
             setTimeout(function () {
                 activeCards.forEach(card => {
-                    card.classList.remove("active");
+                    card.classList.remove("active");                    
+                    card.firstElementChild.classList.remove("show-img");
                 });
+            
+            if (activeCards[0].firstElementChild.alt == activeCards[1].firstElementChild.alt)  {
+                setTimeout(function() {activeCards.forEach((card) => {                    
+                    card.innerText = "";
+                    card.classList.add("deactivate");
+                    checkGameOver(moves, startTime);  
+                } ,500);
+            })
             }
-                , 500);
+         } , 500);                     
+
         }
     }
 }
 /******** This function checks for the completion of game ***********************/
 function checkGameOver(moves, startTime) {
-
     let cards = document.querySelectorAll(".card");
+    console.log(cards[0].classList);
     if([... cards].every((card) => card.classList.contains("deactivate"))){
         let modal = document.querySelector(".modal");
         modal.classList.remove("hide");
@@ -53,6 +54,7 @@ function checkGameOver(moves, startTime) {
         let totalTime = document.createElement("p");
         totalTime.innerText = "Total time taken: " + (new Date()- startTime)/1000 +" secs";
         modal.append(totalMoves, totalTime);
+        console.log("Gameover Executed");
     }
 }
 
