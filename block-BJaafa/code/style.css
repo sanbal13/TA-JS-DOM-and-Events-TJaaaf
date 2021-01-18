@@ -1,0 +1,293 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*************************** Custom Styles begins here ********************/
+html {
+    font-size: 16px;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    /* background: linear-gradient(to left, grey, brown); */
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+.container {
+     max-width: 1600px;
+     width: 100%;
+     margin: 0 auto;
+     padding: 0 2.5%; 
+}
+strong {
+    font-weight: 700;
+}
+/*************************** Flex ********************/
+.flex {
+    display: flex;
+}
+.flex-30 {
+    flex: 0 1 30%;
+}
+.flex-35 {
+    flex: 0 1 35%;
+}
+/*************************** Main ********************/
+main {
+    margin: 2rem;
+    max-width: 35%;
+    min-width: 35%;
+}
+.time, .date  {
+    margin-left: 10%;
+    color: #fff;
+    font-size: 5rem;
+    padding: 1rem;
+    box-shadow: 1px 1px 2px grey;
+    background-color: brown;
+    display: inline-block;
+    width: 80%;
+    border-radius: 0.5rem;
+    letter-spacing: 2px;
+    font-kerning: normal;
+    text-align: center;
+    text-shadow: 1px 1px 2px grey;
+}
+.date {
+    font-size: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+    position: relative;
+}
+.digit {
+    display: inline-block;
+    width: 2.5rem;
+    /* background-color: orchid; */
+    margin-right: 0.5rem;
+    text-align: center;
+}
+.weekday {
+    position: absolute;
+    font-size: 0.8rem;
+    color: #fff;
+    top: 0.2rem;
+    right: 0.5rem;
+    border: 0.1rem solid rgb(167, 82, 82);
+    border-radius: 0.1rem;
+    padding: 0.1rem; 
+}
+
+/*************************** Aside ********************/
+aside {
+    min-width: 30%;
+}
+.vscode, .string, .array {
+    width: 100%;
+    background-color: aquamarine;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    color: rgb(145, 135, 47);
+    background-color: rgb(43, 18, 18);
+    overflow-x: hidden;
+    overflow-wrap: normal;
+}
+.heading-section {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.heading-method, .heading-shortcut, .description, .return-type, .example, button {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 1px rgb(110, 107, 107);
+    overflow-wrap: break-word;
+    max-width: 100%;
+    min-width: 80%;
+} 
+
+.return-type, .example {
+    text-align: left;
+    margin: 1rem;
+} 
+
+.heading-method, .heading-shortcut {
+    font-size: 2rem;
+    background-color: rgb(71, 68, 68);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+.return-type {
+    background-color: rgb(53, 47, 47);
+}
+.example {
+    background-color: rgb(34, 33, 33);
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+.output {
+    background-color: rgb(104, 62, 62);
+    padding: 0.1rem;
+    border-radius: 0.1rem;
+}
+button {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: grey;
+    box-shadow: 1px 1px 1px black;
+}
+button:hover {
+    background-color: rgb(85, 46, 46);
+    color: #fff;
+}
+a {
+    color:rgb(114, 62, 62);
+}
+
+.description {
+    background-color:rgb(59, 44, 44);
+    margin: 1rem;
+}
+
+
+/****************************************** Todo *******************************************/
+.text, li {
+    width: 80%;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    background-color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 1.5rem;
+    outline : none;
+    color: grey;
+    margin-left: 10%;
+}
+
+li {
+    background-color: rgb(128, 128, 128, 0.2);
+    border-radius: 0.2rem;
+    box-shadow: 0.1rem 0.1rem 0.2rem #fff;
+    margin-top: 1rem;
+}
+
+.status {
+    width: 80%;
+    padding: 1rem;
+    margin-top: 0.1rem;
+    background-color: black;
+    font-size: 0.9rem;
+    color: grey;
+    margin-left: 10%;
+    margin-bottom: -1rem;
+    display: none;
+}
+
+.all, .active, .completed {
+    margin-right: 1rem;
+    padding: 0.1rem 0.5rem;
+    cursor: pointer;
+    color: red;
+} 
+.status-active {
+    border: 1px dashed green;
+    color: green;
+}
+
+.circle {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: aqua;
+    margin-right: 0.5rem;
+    margin-top: 0.3rem;
+    cursor: pointer;    
+}
+.red {
+    background-color: rgb(131, 4, 4);
+}
+.space-between {
+    justify-content: space-between;
+}
+.cross {
+    margin-right: 0.5rem;
+    color: rgb(131, 4, 4);
+    font-weight: 500;
+    cursor: pointer;
+    display: none;
+}
+
+li:hover {
+    box-shadow: 0.1rem 0.1rem 0.2rem green;
+}
+
+li:hover .cross {
+    display: block;
+}
+.strike {
+    text-decoration: line-through;
+    text-decoration-color: brown;
+    color: rgb(65, 60, 60);
+}
+.visible {
+    display: inline-flex;
+}
+
