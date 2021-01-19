@@ -10,7 +10,7 @@ let ul = document.createElement("ul");
 todo.append(ul);
 main.append(todo);
 
-let todoData = [];
+let todoData = JSON.parse(localStorage.getItem("todos")) || [];
 
 
 /* *********************************************************************** Creating the Status Div ******************************************************* */
@@ -75,8 +75,9 @@ function handleKeyup(event) {
         listItem.isSelected = isSelected;
         listItem.rank = count;
         todoData.push(listItem);
+        localStorage.setItem("todos", JSON.stringify(todoData));
         text.value = "";
-        callCreateUI(todoData);
+        callCreateUI(todoData);        
     }
 }
 
@@ -125,6 +126,7 @@ function createUI(todoList){
    });
 }
 
+createUI(todoData);
 
 /* ************************************************************************* Handle cross ******************************************************* */
 
@@ -132,6 +134,7 @@ function handleCross(event) {
       let cross = event.target;
       let index = cross.previousElementSibling.children[1].getAttribute("data-index");
       todoData.splice(index, 1);
+      localStorage.setItem("todos", JSON.stringify(todoData));
       callCreateUI();
 
 }
@@ -142,6 +145,7 @@ function handleCircle(event) {
     let circle = event.target;
     index = circle.nextElementSibling.getAttribute("data-index");
     todoData[index].isSelected = !(todoData[index].isSelected); 
+    localStorage.setItem("todos", JSON.stringify(todoData));
     callCreateUI();
 }
 
