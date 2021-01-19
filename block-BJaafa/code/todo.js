@@ -102,6 +102,7 @@ function createUI(todoList){
     li.classList.add("flex");
     let data = document .createElement("div");
     data.classList.add("flex");
+    data.classList.add("data");
     li.classList.add("space-between");
     let cross = document.createElement("div");
     cross.classList.add("cross");
@@ -110,6 +111,7 @@ function createUI(todoList){
     circle.classList.add("circle");
     circle.addEventListener("click", handleCircle);
     let todo = document.createElement("div");
+    todo.classList.add("todo");
     cross.innerText = "X";
     todo.innerText = ele.todo;
     if(ele.isSelected) {
@@ -117,7 +119,6 @@ function createUI(todoList){
         todo.classList.add("strike");
     } else {
         circle.classList.remove("red");
-
     }
     todo.setAttribute("data-index", index);
     data.append(circle, todo);    

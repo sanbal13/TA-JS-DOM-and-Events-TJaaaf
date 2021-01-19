@@ -256,13 +256,22 @@ li {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    background-color: aqua;
+    background-color: rgb(35, 133, 35);
+    border: 0.15rem solid rgb(110, 108, 108);
     margin-right: 0.5rem;
     margin-top: 0.3rem;
     cursor: pointer;    
+    align-self: top;
+}
+.todo {
+    width: 95%;
+    text-transform: capitalize ;
+}
+.data {
+    width: 92%;
 }
 .red {
-    background-color: rgb(131, 4, 4);
+    background-color: rgb(133, 42, 42);
 }
 .space-between {
     justify-content: space-between;
@@ -273,6 +282,7 @@ li {
     font-weight: 500;
     cursor: pointer;
     display: none;
+    align-self: center;
 }
 
 li:hover {
